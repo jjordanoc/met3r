@@ -140,7 +140,7 @@ When using **MEt3R** in your project, consider citing our work as follows.
     <pre><code>@inproceedings{asim25met3r,
     title = {MEt3R: Measuring Multi-View Consistency in Generated Images},
     author = {Asim, Mohammad and Wewer, Christopher and Wimmer, Thomas and Schiele, Bernt and Lenssen, Jan Eric},
-    booktitle = {Computer Vision and Pattern Recognition ({CVPR})},
+    booktitle = {IEEE/CVF Computer Vision and Pattern Recognition ({CVPR})},
     year = {2025},
 }</code></pre>
   </div>
