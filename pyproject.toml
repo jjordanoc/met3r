@@ -1,0 +1,61 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "met3r"
+version = "1.0.1"
+description = "MEt3R: Measuring Multi-View Consistency in Generated Images"
+license = "MIT"
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [
+    { name = "Mohammad Asim", email = "masim@mpi-inf.mpg.de" },
+    { name = "Christopher Wewer", email = "cwewer@mpi-inf.mpg.de" },
+    { name = "Thomas Wimmer", email = "twimmer@mpi-inf.mpg.de" },
+    { name = "Bernt Schiele", email = "schiele@mpi-inf.mpg.de" },
+    { name = "Jan Eric Lenssen", email = "jlenssen@mpi-inf.mpg.de" },
+]
+
+dependencies = [
+    "torch>=2.1.0",
+    "torchvision>=0.15.0",
+    "torchmetrics",
+    "iopath",
+    "roma",
+    "matplotlib",
+    "tqdm",
+    "opencv-python",
+    "scipy",
+    "einops",
+    "numpy",
+    "jaxtyping",
+    "pytorch-lightning",
+    "pyglet<2",
+    "timm==0.4.12",
+    "huggingface-hub[torch]>=0.22",
+    "lpips",
+    "featup",
+    "pytorch3d",
+]
+
+keywords = ["computer vision", "multi-view consistency", "3D", "deep learning", "metrics"]
+
+[project.urls]
+"Homepage" = "https://geometric-rl.mpi-inf.mpg.de/met3r/"
+"Repository" = "https://github.com/mohammadasim98/met3r"
+
+[tool.uv.sources]
+featup = { git = "https://github.com/mhamilton723/FeatUp" }
+pytorch3d = { git = "https://github.com/facebookresearch/pytorch3d.git" }
+
+[tool.setuptools]
+license-files = ["LICENSE"]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = [
+    "met3r*",
+    "mast3r",
+    "mast3r.*",
+]
